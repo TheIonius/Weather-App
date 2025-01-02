@@ -210,19 +210,6 @@ body {
     transform: scale(1.1);
 }
 
-.weather-info::before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
-    background: url('https://i.imgur.com/XkU1YHH.png') no-repeat center;
-    background-size: contain;
-    opacity: 0.8;
-}
-
 .weather-info[data-weather="rain"]::after {
     content: '';
     position: absolute;
