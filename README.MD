@@ -1,12 +1,12 @@
 # Weather App
 
-![Weather App Screenshot](./assets/images/app-screenshot.png)
+![Weather App Screenshot](./assets/images/Screenshot-2025-01-02-141012.png)
 
 A modern, responsive weather application that provides current weather conditions and 5-day forecasts for any city worldwide.
 
 ## Features
 
-![Features Preview](./assets/images/features-preview.gif)
+![Features Preview](./assets/images/Screenshot-2025-01-02-141037.png)
 
 - Real-time weather data using the OpenWeatherMap API
 - Current weather conditions including:
@@ -21,13 +21,6 @@ A modern, responsive weather application that provides current weather condition
 - Search by city name
 - Support for Enter key to trigger search
 
-## App Preview
-
-<div align="center">
-  <img src="./assets/images/mobile-view.png" alt="Mobile View" width="200"/>
-  <img src="./assets/images/tablet-view.png" alt="Tablet View" width="400"/>
-  <img src="./assets/images/desktop-view.png" alt="Desktop View" width="600"/>
-</div>
 
 ## Technologies Used
 
@@ -40,7 +33,7 @@ A modern, responsive weather application that provides current weather condition
 
 ## Installation & Setup
 
-![Setup Guide](./assets/images/setup-guide.png)
+![Setup Guide](./assets/images/Screenshot-2025-01-02-141043.png)
 
 1. Clone this repository
    ```bash
@@ -76,19 +69,14 @@ A modern, responsive weather application that provides current weather condition
 - Input field with focus effects
 - Floating animation on weather icons
 
-## Demo
-
-![Demo GIF](./assets/images/demo.gif)
 
 Try out the live demo: [Weather App Demo](https://yourusername.github.io/weather-app)
 
-## Screenshots
 
-### Dark Mode
-![Dark Mode](./assets/images/dark-mode.png)
-
-### Light Mode
-![Light Mode](./assets/images/light-mode.png)
+### Web Preview
+![Weather App Preview 1](./assets/images/Screenshot-2025-01-02-141050.png)
+![Weather App Preview 2](./assets/images/Screenshot-2025-01-02-141056.png)
+![Weather App Preview 3](./assets/images/Screenshot-2025-01-02-141103.png)
 
 ## Acknowledgements
 
@@ -103,11 +91,3 @@ Try out the live demo: [Weather App Demo](https://yourusername.github.io/weather
 This project is open source and available under the MIT License
 
 Questions, Comments? I would love to hear your feedback and keep learning <3
-
-## Contributing
-
-Feel free to contribute to this project! Check out our [Contributing Guidelines](CONTRIBUTING.md) for more information.
-
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/weather-app.svg)](https://github.com/yourusername/weather-app/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/yourusername/weather-app.svg)](https://github.com/yourusername/weather-app/network)
-[![GitHub issues](https://img.shields.io/github/issues/yourusername/weather-app.svg)](https://github.com/yourusername/weather-app/issues)
