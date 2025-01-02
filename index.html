@@ -3,109 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Weather</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text x=%2264%22 y=%2296%22 text-anchor=%22middle%22 font-size=%2290%22>⛅</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="search-box">
-            <input type="text" id="city-input" placeholder="Enter city name">
-            <button onclick="getWeather()">
-                <span>Search</span>
-            </button>
+    <div class="background-wrapper">
+        <div class="floating-clouds"></div>
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Enter city name...">
+                <button onclick="getWeather()">
+                    <span>Search</span>
+                </button>
+            </div>
+            <div class="weather-info" data-weather="">
+                <h2 id="city-name"></h2>
+                <img id="weather-icon" class="weather-icon"  src="https://openweathermap.org/img/wn/02d@2x.png" alt="Weather icon">
+                <h3 id="temperature"></h3>
+                <p id="description"></p>
+                <p id="humidity"></p>
+                <p id="wind-speed"></p>
+            </div>
+            <div class="forecast" id="forecast"></div>
         </div>
-        <div class="weather-info">
-            <h2 id="city-name"></h2>
-            <img id="weather-icon" class="weather-icon" src="" alt="Weather icon">
-            <h3 id="temperature"></h3>
-            <p id="description"></p>
-            <p id="humidity"></p>
-            <p id="wind-speed"></p>
-        </div>
-        <div class="forecast" id="forecast"></div>
     </div>
 
-    <script>
-        const apiKey = '8d2de98e089f1c28e1a22fc19a24ef04'; // OpenWeatherMap API key
+    <div class="bottom-container">
+        <div class="social-links">
+            <a href="https://github.com/TheIonius"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2025 TheIonius. All Rights Reserved.</p>
+    </div>
 
-        async function getWeather() {
-            const cityInput = document.getElementById('city-input').value;
-            if (!cityInput) return;
-
-            try {
-                // Get weather data directly using city name
-                const weatherResponse = await fetch(
-                    `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(cityInput)}&units=metric&appid=${apiKey}`
-                );
-                const weatherData = await weatherResponse.json();
-
-                if (weatherData.cod === '404') {
-                    alert('City not found. Please try again.');
-                    return;
-                }
-
-                const forecastResponse = await fetch(
-                    `https://api.openweathermap.org/data/2.5/forecast?q=${encodeURIComponent(cityInput)}&units=metric&appid=${apiKey}`
-                );
-                const forecastData = await forecastResponse.json();
-
-                displayWeather(weatherData);
-                displayForecast(forecastData);
-            } catch (error) {
-                alert('Error fetching weather data. Please try again.');
-            }
-        }
-
-        function displayWeather(data) {
-            const cityName = document.getElementById('city-name');
-            const temperature = document.getElementById('temperature');
-            const description = document.getElementById('description');
-            const weatherIcon = document.getElementById('weather-icon');
-            const humidity = document.getElementById('humidity');
-            const windSpeed = document.getElementById('wind-speed');
-
-            cityName.textContent = data.name;
-            temperature.textContent = `${Math.round(data.main.temp)}°C`;
-            description.textContent = data.weather[0].description;
-            weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-            humidity.textContent = `Humidity: ${data.main.humidity}%`;
-            windSpeed.textContent = `Wind Speed: ${Math.round(data.wind.speed * 3.6)} km/h`;
-
-            // Add fade-in animation
-            [cityName, temperature, description, weatherIcon, humidity, windSpeed].forEach(element => {
-                element.style.opacity = 0;
-                element.style.animation = 'fadeIn 0.5s ease forwards';
-            });
-        }
-
-        function displayForecast(data) {
-            const forecastDiv = document.getElementById('forecast');
-            forecastDiv.innerHTML = '';
-
-            // Display next 5 days forecast with staggered animation
-            for (let i = 0; i < data.list.length; i += 8) {
-                const forecast = data.list[i];
-                const date = new Date(forecast.dt * 1000);
-                
-                const forecastItem = document.createElement('div');
-                forecastItem.className = 'forecast-item';
-                forecastItem.style.animation = `fadeIn 0.5s ease ${i * 0.1}s forwards`;
-                forecastItem.innerHTML = `
-                    <p>${date.toLocaleDateString('en-US', { weekday: 'short' })}</p>
-                    <img src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png" alt="Weather icon">
-                    <p>${Math.round(forecast.main.temp)}°C</p>
-                    <p>${forecast.weather[0].description}</p>
-                `;
-                forecastDiv.appendChild(forecastItem);
-            }
-        }
-
-        // Add event listener for Enter key
-        document.getElementById('city-input').addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                getWeather();
-            }
-        });
-    </script>
+    <script src="weatherDisplay.js"></script>
 </body>
 </html>
