@@ -1,12 +1,8 @@
-# Weather App
-
-![Weather App Screenshot](./assets/images/Screenshot-2025-01-02-141012.png)
+# ☀️ Weather App 🐾
 
 A modern, responsive weather application that provides current weather conditions and 5-day forecasts for any city worldwide.
 
 ## Features
-
-![Features Preview](./assets/images/Screenshot-2025-01-02-141037.png)
 
 - Real-time weather data using the OpenWeatherMap API
 - Current weather conditions including:
@@ -19,8 +15,6 @@ A modern, responsive weather application that provides current weather condition
 - Responsive design
 - Clean and intuitive user interface
 - Search by city name
-- Support for Enter key to trigger search
-
 
 ## Technologies Used
 
@@ -33,11 +27,9 @@ A modern, responsive weather application that provides current weather condition
 
 ## Installation & Setup
 
-![Setup Guide](./assets/images/Screenshot-2025-01-02-141043.png)
-
 1. Clone this repository
    ```bash
-   git clone https://github.com/yourusername/weather-app.git
+   git clone https://github.com/TheIonius/weather-app.git
    ```
 2. Replace the `apiKey` in `index.html` with your own OpenWeatherMap API key
    ```javascript
@@ -69,25 +61,14 @@ A modern, responsive weather application that provides current weather condition
 - Input field with focus effects
 - Floating animation on weather icons
 
+## ⭐ Acknowledgements
 
-Try out the live demo: [Weather App Demo](https://TheIonius.github.io/weather-app)
+- [OpenWeatherMap API](https://openweathermap.org/api) weather data
+- [Font Awesome](https://fontawesome.com/) weather icons
 
-
-### Web Preview
-![Weather App Preview 1](./assets/images/Screenshot-2025-01-02-141050.png)
-![Weather App Preview 2](./assets/images/Screenshot-2025-01-02-141056.png)
-![Weather App Preview 3](./assets/images/Screenshot-2025-01-02-141103.png)
-
-## Acknowledgements
-
-- OpenWeatherMap for providing the weather data API
-- The amazing open source community for inspiration and learning resources
-- Font Awesome for weather icons
-- Mozilla Developer Network (MDN) for excellent documentation
-- Various UI/UX designers whose work inspired the interface design
 
 ## License
 
-This project is open source and available under the MIT License
+Open source described under the MIT License
 
-Questions, Comments? I would love to hear your feedback and keep learning <3
+Questions, Comments? I would love to hear your feedback <3 🐾
