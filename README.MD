@@ -70,7 +70,7 @@ A modern, responsive weather application that provides current weather condition
 - Floating animation on weather icons
 
 
-Try out the live demo: [Weather App Demo](https://yourusername.github.io/weather-app)
+Try out the live demo: [Weather App Demo](https://TheIonius.github.io/weather-app)
 
 
 ### Web Preview
