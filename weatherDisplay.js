@@ -42,10 +42,6 @@ function displayWeather(data) {
     humidity.textContent = `Humidity: ${data.main.humidity}%`;
     windSpeed.textContent = `Wind Speed: ${Math.round(data.wind.speed * 3.6)} km/h`;
 
-    weatherIcon.onerror = function() {
-        this.src = `https://raw.githubusercontent.com/basmilius/weather-icons/dev/production/fill/all/${data.weather[0].icon}.svg`;
-    };
-
     [cityName, temperature, description, weatherIcon, humidity, windSpeed].forEach(element => {
         element.style.opacity = 0;
         element.style.animation = 'fadeIn 0.5s ease forwards';
